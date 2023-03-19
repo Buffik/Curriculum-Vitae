@@ -1,0 +1,58 @@
+html {
+  font-size: 10px;
+  background-color: $color-background;
+  scroll-behavior: smooth;
+}
+
+body {
+  @extend %font-prim;
+  @include font($size: 2rem, $height: 2.4rem, $weight: 400);
+  background-color: $color-background;
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main {
+  flex-grow: 1;
+}
+
+header,
+main,
+footer {
+  background-color: $color-primary;
+  margin: auto;
+  width: 100%;
+  max-width: 1440px;
+}
+
+h1 {
+  text-align: center;
+  @extend %font-prim;
+  color: $color-header;
+  @include font($size: 3rem, $height: 3rem, $weight: 300);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  & span {
+    @include font($size: 3rem, $height: 2.2rem, $weight: 700);
+  }
+}
+
+h2 {
+  @extend %font-prim;
+  color: $color-header;
+  @include font($size: 4rem, $height: 5.3rem, $weight: 500);
+  @include media-small-tablet {
+    @include font($size: 1.4rem, $height: 1.852rem);
+  }
+}
+
+h3 {
+  text-align: center;
+  margin: 0;
+  color: $color-header;
+  @include font($size: 2rem, $height: 1.36rem, $weight: 400);
+  text-transform: capitalize;
+}
