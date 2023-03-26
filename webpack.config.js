@@ -10,7 +10,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
-    assetModuleFilename: 'src/assets/img/[name].[ext]',
+    assetModuleFilename: 'src/assets/[name][ext]',
   },
   devServer: {
     open: true,
