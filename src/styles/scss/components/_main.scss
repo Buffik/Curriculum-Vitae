@@ -261,6 +261,35 @@
   }
 }
 
+.spoiler {
+  margin-bottom: 20px;
+  & label {
+    user-select: none;
+  }
+  & label:hover {
+    cursor: pointer;
+  }
+}
+
+.spoiler input,
+.spoiler ul {
+  display: none;
+}
+
+.spoiler :checked ~ ul {
+  display: block;
+}
+
+.spoiler label::before {
+  content: '►';
+  margin-right: 5px;
+  color: $color-header;
+}
+.spoiler :checked + label::before {
+  content: '▼';
+  color: $color-header;
+}
+
 .app {
   &__header {
     font-weight: 700;
@@ -274,6 +303,9 @@
     &:hover {
       transition: all ease 0.3s;
       color: $color-header;
+    }
+    &-gh {
+      margin: 0;
     }
   }
 }
