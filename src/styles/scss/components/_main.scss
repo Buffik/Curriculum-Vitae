@@ -212,6 +212,14 @@
     background: center center no-repeat url('../../assets/icons/code.svg');
     background-size: 25px 25px;
   }
+  &__en-icon {
+    background: center center no-repeat url('../../assets/icons/code.svg');
+    background-size: 25px 25px;
+  }
+  &__ru-icon {
+    background: center center no-repeat url('../../assets/icons/code.svg');
+    background-size: 25px 25px;
+  }
 }
 
 .additional-content {
@@ -233,7 +241,8 @@
       border: none;
     }
     &__title {
-      margin: 0;
+      margin: 0 0 20px 0;
+
       display: flex;
       align-items: center;
       &::before {
@@ -256,7 +265,7 @@
       }
     }
     &__text {
-      color: $color-text;
+      margin: 0 0 10px 0;
     }
   }
 }
@@ -291,6 +300,7 @@
 }
 
 .app {
+  margin-bottom: 30px;
   &__header {
     font-weight: 700;
     margin-bottom: 20px;
@@ -307,6 +317,9 @@
     &-gh {
       margin: 0;
     }
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
   }
 }
 
